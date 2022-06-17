@@ -1,0 +1,152 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Analysing Covid-19 Data with SQL</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">OZGUN TURKMEN GITHUB PORTFOLIO PAGE</span>
+								</a>
+
+
+						</div>
+					</header>
+
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Analysing Covid-19 Data with SQL</h1>
+							<p>In this project, I am going to analyse Covid-19 data using SQL codes. We are going to see cases, tests and vaccination numbers up to countries. This project does not have visualisation. I am going to visualise these results on another project.</p>
+<p>You can find all the codes I used on this project on my GitHub page:&nbsp;<a href="https://github.com/TurkmenOzgun/CovidStatisticsSQL/blob/main/CovidStatisticsSQL.sql">https://github.com/TurkmenOzgun/CovidStatisticsSQL/blob/main/CovidStatisticsSQL.sql</a></p>
+<p><br></p>
+<p>Downloaded Coronavirus data from <a href="https://ourworldindata.org/covid-deaths">https://ourworldindata.org/covid-deaths</a>.</p>
+<p><br></p>
+<p><img src="https://lh3.googleusercontent.com/uv_KgiYw7p7PF0iwaAk4WwN_QoxEXnPFYP8-LqlMniyMPGnIdgyqec_xLUJJoUvvl2qxjpIUJAZsFvPMrpkw2JgCrOAgfybU4l7_M2VXfsq3wwervobx7vS5Bt-XNwrFCQ9lqiKi2JL_L3mlsA" width="623" height="369"></p>
+<p>The date is between February 15, 2020, and February 22, 2022.</p>
+<p>Here is my Excel file:</p>
+<p><br></p>
+<p><img src="https://lh6.googleusercontent.com/Q55WMq7yiJA6sr2Y9Cgr8jJANpE8OpqPuOVt-__ld54S7E3KA2iwkNZVoVyrdQdxo3PS7PVlhtsBoE6uGL8Uhj2unMVr2PmOO4uN-ZxwyQJt32g_VB8z9TYj5TJ_-h5eneQoPm2634Kf_mNjSQ" width="623" height="363"></p>
+<p><br></p>
+<p>There are 163,788 rows and 67 columns.&nbsp;</p>
+<p>This data has daily info about countries&apos; total covid cases and deaths, new cases and dates, vaccinations etc.</p>
+<p>I erased many not needed columns and I created 2 Excel files. One is CovidDeaths.xlsx other one is CovidVaccinations.</p>
+<p>I used SQL Server Import and Export tool and uploaded both Excel files to Microsoft SQL Server Management Studio.</p>
+<p><br></p>
+<p><img src="https://lh4.googleusercontent.com/Q4qM4fA4tt2lbf3RZSbj9BQQI35ehgGdqvACjF4fVJSSIxkQNhn-p1AG684AXoTGxzblhI2Opxrv3nDA43-tOAc0fbszOcR8pizcxI7boCLsfhB3H806kbCHqahp5XmzILeaquOz3pfcZc26bA" width="623" height="612"></p>
+<p><br></p>
+<p>Let&rsquo;s start with some basic queries:</p>
+<ol>
+    <li style="font-weight: bold;">
+        <p><strong>Which country has the most Covid-19 cases?</strong></p>
+    </li>
+</ol>
+<p><img src="https://lh3.googleusercontent.com/4PLNxbiTknRbIJ_vz2_r_mBkOIJMqpERkQAzUheujd5eN3EDR98bGJt9hudyTMVHPXz4vpwqhIIuyXS-xtxRUeZuEfvSLqECh96ez8RLRAxvsuGVwORzeWQ1fHi6H6FDBrT3M-TVxU0OO-FRMQ" width="429" height="542"></p>
+<p>Note: I used &ldquo;continent is not null&rdquo; because, in the dataset, there is also information about regions. For now, I am looking only at country-based data.</p>
+<p>We can see most Covid-19 cases by country but it doesn&rsquo;t make sense much because it is parallel with their population. Let&rsquo;s check cases per population for more meaningful results:</p>
+<ol start="2">
+    <li style="font-weight: bold;">
+        <p><strong>Total cases by population</strong></p>
+    </li>
+</ol>
+<p><img src="https://lh5.googleusercontent.com/NNA-k49DgHX5BxVVXd8XC9AVXdM_CnN88xTKnp7LY3BP3cLy0R2C5pfpZBV1tlSfu_wrblh2mYYCuvRMpVgL9rdfvF4UQ8WjxerqGnIZsEbT0iWi2ODjZjEUFnWDoln9SfurgyhUye_odlw1Og" width="623" height="455"></p>
+<p><br></p>
+<p>Faroe Island, Andorra, Denmark, Gibraltar and Slovenia have the most cases according to population. It seems like small and developed countries are leading according to these numbers.</p>
+<p><br></p>
+<ol start="3">
+    <li style="font-weight: bold;">
+        <p><strong>Vaccinated People by Population</strong></p>
+    </li>
+</ol>
+<p>Let&rsquo;s begin to check vaccination data:</p>
+<p><img src="https://lh5.googleusercontent.com/iGRG8hVzJ35ZKEVbEOaMohG6Yfi51wwke4cA0eQBvFNZhOnbHPTBAbuYb4ABNCIpGer4Woqrg1H2afOCfFqAhSzCL6VZO7WnVX-jakWn3jP_K-sqI2kdHkiLjYs3g-Zq1s2BdsYpIliEep6BKQ" width="623" height="585"></p>
+<p>Biggest vaccination rate by population in the United Arab Emirates.</p>
+<p><br></p>
+<ol start="4">
+    <li style="font-weight: bold;">
+        <p><strong>Total tests by population</strong></p>
+    </li>
+</ol>
+<p><img src="https://lh6.googleusercontent.com/N-rrkid5Nk2GtmZ9dF-arcqeBz_hcGxrEXbT6xJ0bICfTO9nU_bdQ8s1JJJ65uayrpgyXLKUJJVTGiih8Y78JsUJYfywlKH7L0-Q73Ia5rhuE2kn5Lct5l0zjWVbpC47FNEAeyEbZAyxzovzmA" width="623" height="494"></p>
+<p><br></p>
+<p>When we check the test numbers per population, Austria, UAB and Denmark are at the top3. Austria made Covid-19 tests around 17 times more than their population.</p>
+<ol start="5">
+    <li style="font-weight: bold;">
+        <p><strong>Total Deaths per population</strong></p>
+    </li>
+</ol>
+<p><img src="https://lh5.googleusercontent.com/YGOI0oCOyvY52gS-flAgIXuN1K2f_-lBm4yK6aL6WXy3a9wF7oA_4gCAQWmcpMDF37K6MrmPQEUrK8T-2E6ua_OaEhs8BPKfRXuZTIYKxntqcdzboNYB_rysYBJ-SAoyiw-Z5xCsKuy__iokrw" width="624" height="599"></p>
+<p>Peru, Bulgaria and Bosnia and Herzegovina have the most death rates.</p>
+<p><br></p>
+<p><strong>More Advanced SQL&nbsp;</strong></p>
+<ol start="6">
+    <li style="font-weight: bold;">
+        <p><strong>Using CTE and Partition By to see the progress of how vaccination goes</strong></p>
+    </li>
+</ol>
+<p><img src="https://lh3.googleusercontent.com/MWYNDGP1jlOdvS61mkZY9ylVRo5Ks6L8N_yoVl6iWAMFjiCFAk1guW_xJh7EQW3KsZxH6F_xXGLW-F3X1Hw2g76JvrQjBPVpr4DopMjvDZ1Zsu7LILXrvo1dBkEioTxqiDyfLYA6SfwQgndipw" width="623" height="648"></p>
+<p>In this case, I used CTE and partition by features on SQL. With this code, we can see how vaccinations went for all countries and I calculated daily increases. This result is not very readable yet but I will use these outputs in my next project &ldquo;data visualization with Tableau&rdquo;.&nbsp;</p>
+<ol start="7">
+    <li style="font-weight: bold;">
+        <p><strong>Using the Temp table and finding how tests are going by country every day</strong></p>
+    </li>
+</ol>
+<p><img src="https://lh3.googleusercontent.com/acnmpm6axwmvn7qTLmPK5XJP9xnrxsghQJw7qUpWp_Cyss2e3W6IjUyB0oHsHSNk9q2WEyihdv84TJv720VfRwzsv0Cjr8wnvqB5cinmANs8vj8IA_qrxUL8gmAI0DKJkpyU42yyVX8rKz-B4w" width="623" height="765"></p>
+<p><br></p>
+<p>&nbsp;In this case, I wanted to use a temp table. And as a result, we can see the progress of how tests going. Again, the results are not very reader friendly, but these results will be used on Tableau later.</p>
+<ol start="8">
+    <li style="font-weight: bold;">
+        <p><strong>Using Creating View, finding how cases raising by country day by day</strong></p>
+    </li>
+</ol>
+<p><br></p>
+<p><br></p>
+<p><img src="https://lh4.googleusercontent.com/kyklCiMvvKWczjFprDt4bLQ8YvwVFQX9WkdLPiVb2WSzbcv-e4D7BjVepkRLsihjFQhcUuMKwESr0zX5o38mn9Wy0VYvnwwbTOB2I-TtB1IAL7wWqzn6dVLTo_9DHpJHtjJh0gBK3TOAE_JEqg" width="623" height="503.9989936351776"></p>
+<p><br></p>
+<p>I wanted to create a view and see new cases in each country every day. This output will be used on Tableau and I can make new queries using my view.</p>
+<p><br></p>
+<p>Thank you for reading.</p>
+<p><br></p>
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="https://www.facebook.com/turkmenozgun/" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="https://www.instagram.com/ozzguun1/" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="https://github.com/TurkmenOzgun" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved</li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

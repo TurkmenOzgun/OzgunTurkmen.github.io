@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Analysing Covid-19 Data with SQL</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">OZGUN TURKMEN GITHUB PORTFOLIO PAGE</span>
+								</a>
+
+
+						</div>
+					</header>
+
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Visualising Covid-19 data with Tableau</h1>
+							<p>In this project, I am going to analyse Covid-19 data using SQL codes. We are going to see cases, tests and vaccination numbers up to countries. This project does not have visualisation. I am going to visualise these results on another project.</p>
+							<p>In this project, I will visualize the International Covid-19 data with Tableau. The data is from my another project - SQL Covid.</p>
+							<p>You can find the final dashboard from this project:&nbsp;<a href="https://public.tableau.com/app/profile/ozgun.turkmen/viz/Covid-19-Project/Dashboard1">https://public.tableau.com/app/profile/ozgun.turkmen/viz/Covid-19-Project/Dashboard1</a></p>
+							<p>Note: This Covid-data is from&nbsp;<a href="https://ourworldindata.org/covid-deaths">https://ourworldindata.org/covid-deaths</a>.</p>
+							<p>Data is between February 15, 2020, and February 22, 2022.</p>
+							<p><br></p>
+							<p>Firstly, I get to my SQL codes from GıtHub page:</p>
+							<p><a href="https://github.com/TurkmenOzgun/CovidStatisticsSQL/blob/main/CovidStatisticsSQL.sql">https://github.com/TurkmenOzgun/CovidStatisticsSQL/blob/main/CovidStatisticsSQL.sql</a></p>
+							<p><br></p>
+							<p><br></p>
+							<p><img src="https://lh4.googleusercontent.com/jnCdAGPYxyuH0ueubSUyEdCXRAEXSr3nU9zHOI4TBu79yIueQ_3hZTdskP9iwbC-KgojkrnB8RNHAJdseFgGTRoemJNFRxQCW6teiuySY-3KmUaaxZ9r0G8cw3fGsm1fLbJNQWMxIJuwIHtdcA" width="624" height="439"></p>
+							<p><br></p>
+							<p>Copied and pasted codes to SQL Server management studio 18 program:</p>
+							<p><img src="https://lh4.googleusercontent.com/cNgdUqQyUNFLkt4Hcn0_yWlqayEB9PHfEsnPNS5nMXT_HisuBCmcOj2NQ9u6QdTiMOrQGDAyhMjmKMIEXiv0bkmujhf3XYiieWX8zMb8ZHM4c0yGm0XyqAKl8taPXAlut5Q3MQOMTM7Sy6JXKw" width="623" height="462"></p>
+							<p>Executed codes one by one and copied the outcomes tables to Excel.</p>
+							<p><img src="https://lh5.googleusercontent.com/sGKL-2LIrbwVGbPwxLXXIFVgRD_ibSGAoPurkNhcPPdOW25UxLxKwEclawibDG8Yb1ANYRez3hTgjWw3K21I4_UVDN0YovBjykT7g0yY--UdWhpoFQjRV-_ZK5zRbxngxgIvNLtFavQiECGQLw" width="530" height="523"></p>
+							<p>Then uploaded these Excel files to the Tableau Public program:</p>
+							<p><img src="https://lh5.googleusercontent.com/1HHkvQBPPmxqFD_7XFalqjiQIXLwLuqDADQ87bl5SZ5kMupyrUxIK0qYViVOxd2a_BulI_VDz1M3TB6kM0klVW7bSt5CEypYrunR0Ntmub0AI-AbM4U30-rVPkbJvSQB0eCJZoh_pxOX-nWGtg" width="623" height="550"></p>
+							<p>And I created worksheets from each Excel file:</p>
+							<ol>
+								<li style="font-weight: bold;">
+									<p><strong>Total Covid-19 cases by countries:</strong></p>
+								</li>
+							</ol>
+							<p>The United States, India and Brazil are the countries which have the most Covid-19 cases.</p>
+							<p><img src="https://lh5.googleusercontent.com/WeuyauaSainsTnvD9k7ozkhkTK06ucYMdWU5g13-3Wo4pN7dCO4ujAN6NBprSyYf76HaNWuxk28Z_yG8N6gNg_clFtC9os30vMGD4YJMi7vFqhMQ2KEjitXqsggPquHHVP-RW-vVqoM31rMUfg" width="623" height="446"></p>
+							<p><br></p>
+							<ol start="2">
+								<li style="font-weight: bold;">
+									<p><strong>Covid-19 cases per population</strong></p>
+								</li>
+							</ol>
+							<p>When we look at cases up to their population, we can see that small European countries have the biggest cases/population numbers.&nbsp;</p>
+							<p>Top 3 countries:</p>
+							<p>Faroe Islands: 65.33</p>
+							<p>Andorra: 48.89</p>
+							<p>Denmark: 45:37</p>
+							<p><img src="https://lh3.googleusercontent.com/TQ3YGMGsJQxkXL8plL-nZTxDSSb44C7mKcyzcNagZgZyweRFftiYSWru0hA1ffQf8MaisuINc2SsygE4SndejWOlk1sOSaZV1FrudKYsGu1jCJSj9VW4MA-wJJv4eIjHrEl_hWhPZz7Nq0Wf-w" width="622" height="431"></p>
+							<p><br></p>
+							<p><strong>3- Top 10 countries by death per population:</strong></p>
+							<p>The death rate per population is very high in eastern European countries. The top is Bulgaria with a 0.51 rate.</p>
+							<p><br></p>
+							<p><img src="https://lh5.googleusercontent.com/btUxTRBzEIXepF4LDb0InmV97hE4xf4RSzuyZU5ISlwbrZTLXGNATg_pzc28dvwEQXfc6clLVyz7-ANzjArSrUOJqW12VGbp732uM1ZZsAsfS93sdGVMhvviv5IYXUsAqXwe_n8" width="624" height="319"></p>
+							<p><strong>4- Vaccinated people rate &nbsp;per population</strong></p>
+							<p>In the United Arab Emirates, almost everybody is vaccinated at least 1 time. Portugal, Cuba and Chile are following them.</p>
+							<p><br></p>
+							<p><img src="https://lh6.googleusercontent.com/kmlUoY91MHAjvK0KmepptUmCJ9jlDt_bJD75xCEl_qIKwCPM36-bx4VGmAwqe0wOb63ZN_7JNAKGevjKuUCCivEF__ZHDRmreISamSRcNsckI25_IBKH4tBjmVhNR6BLHjA2Yjw" width="170" height="461"></p>
+							<p><strong>5- Correlation between vaccination and cases</strong></p>
+							<p><img src="https://lh4.googleusercontent.com/BGctaT3DbsyCLit5LISV9fAJ7ZWKjE3a3NRF2fLL6xMhXz_hqP0Fn0FD3J8s8V6bNqRkAUdZUAj2oLvOjT3c8bw2ew4N4VRQd2wUFxCKKhRyloES0oF2QrohxRUTuMg0xb246x8" width="479" height="391"></p>
+							<p>When we check the 2 tables, we don&rsquo;t see any direct correlation between vaccination and cases. All these countries are high vaccinated countries. But they have different volumes of cases per population rate.</p>
+							<p><br></p>
+							<p><strong>6- Vaccination time series USA vs Germany</strong></p>
+							<p>I wanted to compare between USA and Germany regarding daily vaccination numbers.</p>
+							<p><img src="https://lh4.googleusercontent.com/_zfyP0ugZ5fO5RiuNp-R7EZr1AMPLUshCMtupik_lbBcrp9Atxtw0nLsCtOmYUuf4Ihx7H2VXpmamMJD7JAfZ3XZ_s-tudKS7qPDzUp2__Fi6Mys7RHcWaaQOYwqoL_jbF7h0c4" width="624" height="524"></p>
+							<p><br></p>
+							<p><br></p>
+							<p>It is expected that the USA have more vaccination because of their larger population.&nbsp;</p>
+							<p><br></p>
+							<p>It is visible that the USA started to vaccination process earlier and faster than Germany. But the second peak point is more or less at the same time. (around December of 2021)</p>
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="https://www.facebook.com/turkmenozgun/" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="https://www.instagram.com/ozzguun1/" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="https://github.com/TurkmenOzgun" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved</li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

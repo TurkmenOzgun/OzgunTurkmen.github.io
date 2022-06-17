@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Analysing Airbnb Seattle Dataset with Tableau</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">OZGUN TURKMEN GITHUB PORTFOLIO PAGE</span>
+								</a>
+
+
+						</div>
+					</header>
+
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Analysing Airbnb Seattle Dataset with Tableau</h1>
+							<p>Final dashboard link: <a href="https://public.tableau.com/views/AirbnbSeattleProject_16490244231700/Dashboard1">https://public.tableau.com/views/AirbnbSeattleProject_16490244231700/Dashboard1</a></p>
+							<p>In this project, I will use Tableau to visualize Seattle Airbnb Data.</p>
+							<p>Seattle Airbnb data is the most upvoted Airbnb dataset in Kaggle.</p>
+							<p>Data includes;</p>
+							<ul>
+								<li>
+									<p><strong>Listings</strong>, including full descriptions and average review score</p>
+								</li>
+								<li>
+									<p><strong>Reviews</strong>, including a unique id for each reviewer and detailed comments</p>
+								</li>
+								<li>
+									<p><strong>Calendar</strong>, including listing id and the price and availability for that day</p>
+								</li>
+							</ul>
+							<p>Problem:&nbsp;Our business partner wants to hire out his homes on the Airbnb website and he asked our help to analyse Airbnb data to see to make the best business decisions.</p>
+							<p>Downloaded the data from the Kaggle website.</p>
+							<p><a href="https://www.kaggle.com/datasets/airbnb/seattle">https://www.kaggle.com/datasets/airbnb/seattle</a></p>
+							<p><br></p>
+							<p><img src="https://lh5.googleusercontent.com/WMiMusrCp6dkeDkSItzBYzlHamUI4V91QgylRjSPSi-y1dFo9BAZ-cS9eIvD4qtWT1QZ6OBOM4Vs2Izy2_mLiNnvrJiu6cIslBz0dgHRs_qUznvQ1DUNTqCrYd7pAbA7KNybytdqhOLECJHheQ" width="955.7817820310593" height="379"></p>
+							<p><br></p>
+							<p>Used these 3 documents and combined them and uploaded them to Tableau Public program.</p>
+							<p><strong>Setting up joins:</strong></p>
+							<p>Combined 2 sheets with Inner Join with IDs.</p>
+							<p><img src="https://lh3.googleusercontent.com/TKwd7FjRLEXBj3R0Msaoz_2A6nhyOZ41cXmSxpqSjIhO30duBqoUHZCa2ppHyd8mq8Nfqx9A-mmDSqD6oF-aSdcQscIk5CvjyyX8JepLfLhDLTI_GTVmlY-_5W-TVNozHDtcZKciuqr6g5u64Q" width="623" height="439"></p>
+							<p><br></p>
+							<p><strong>1- Where is the most expensive area in Seattle?</strong></p>
+							<p>The most expensive area is visible with postal codes.</p>
+							<p><img src="https://lh5.googleusercontent.com/pXmKEij4HokheH1UhNObcNOx6fOlSvK9om3b6WKruJy4MN1nO07kLkExMCqAnyGY3_uxNZl3diRmfrb3RfY4L5p_9L2UcxtMw7C0nhUi2ckIhCoikz6tihJdCX1bMvRr541E12udf3hllKxWzQ" width="623" height="370"></p>
+							<p><strong><br></strong></p>
+							<p><strong>2- Let&rsquo;s see the average prices of areas on the map:</strong></p>
+							<p>Regions in Seattle with average prices.</p>
+							<p><img src="https://lh4.googleusercontent.com/W2eGWbbUr9fpSnTITm4xqDSGDFgVMt2OoP_4SOAPEPx5LmwHLJjnz9-7nSQV_5mwinGfqmTxo8z19LMnlc4y8JVzhi8ZwSSF5WHkpvt-UKX0fhgI-AF_HSw2R057V0BZOZ2sBVS2OQ98Rxv1PA" width="624" height="397"></p>
+							<p><strong>3- Which time of the year is the busiest?</strong></p>
+							<p>From this visual, we see that the busiest times are the beginning of the summer and the holiday season.</p>
+							<p><img src="https://lh5.googleusercontent.com/0pcxoL33AwSG0Q-zJY0GBEw6N_RWhmoy0nr5nhK1pBGqY9zPK-iQEnA8mkiO-jidLgYhFOF27BDam1mToO-oyCmgQhu0nOU6KEn5hgPZke97nqqCA62po7oh-p3We7V2aS1brmLFhFZ3fDMrfA" width="622" height="393"></p>
+							<p><strong>4- Average prices regarding to bedroom number?</strong></p>
+							<p><br></p>
+							<p><img src="https://lh5.googleusercontent.com/Jhhe_luU-TEnyb9s0CSzIwvV61lk1hdcOATniH764F7g01BjrTLnPw1D6rKF0IJJS_yKbqhxf6MIcBy3Ic2FUo_AfM1F82O7HNDUQ6vAKio5-4RDw43Ocr-jEvtT_Sr__EMCTCipIh0p7hpJzw" width="623" height="582"></p>
+							<p><strong>5- How many listings there are up to the bedroom number?</strong></p>
+							<p><img src="https://lh3.googleusercontent.com/nJzebHYm3aMtAMwe2IvbnLQlKUlBMOnk_T70Qg9sS7VNExcgz1it0mrDCu8dR6UUBkJ2-j726DWhJj3kxz80swDo0saEQYeiwKjsjhQGeeuk1VJXlZx8i8OBbYKhHh6-jXsGoWT4ZbZHiPz3cA" width="623" height="343"></p>
+							<p><br></p>
+							<p>You can find the final dashboard on: <a href="https://public.tableau.com/views/AirbnbSeattleProject_16490244231700/Dashboard1">https://public.tableau.com/views/AirbnbSeattleProject_16490244231700/Dashboard1</a></p>
+							<p>Thank you.</p>
+						</div>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="https://www.facebook.com/turkmenozgun/" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="https://www.instagram.com/ozzguun1/" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="https://github.com/TurkmenOzgun" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved</li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
